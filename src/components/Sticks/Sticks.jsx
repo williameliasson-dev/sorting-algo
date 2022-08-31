@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Sticks.css";
 
 const Sticks = (props) => {
   const [renderSticks, setRenderSticks] = useState([]);
-  console.log(Math.floor(Math.random() * 10));
 
-  for (let i = 0; i < props.amount; i++) {
-    const stick = {
-      height: Math.floor(Math.random() * 10) * 4 + 10,
-    };
+  useEffect(() => {
+    let stickObjects = [];
 
-    renderSticks.push(stick);
-  }
+    for (let i = 0; i < props.amount; i++) {
+      const stick = {
+        height: Math.floor(Math.random() * 12) * 5 + 5,
+      };
+      stickObjects = [...stickObjects, stick];
+    }
+
+    setRenderSticks(stickObjects);
+  }, [props.amount]);
 
   console.log(renderSticks);
 

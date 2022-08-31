@@ -4,11 +4,12 @@ import "./App.css";
 import Sticks from "./components/Sticks/Sticks";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [amount, setAmount] = useState(100);
 
   return (
     <div>
-      <Sticks amount={70} />
+      <input value={amount} onChange={(e) => setAmount(e.target.value)}></input>
+      <Sticks amount={amount} />
     </div>
   );
 }
