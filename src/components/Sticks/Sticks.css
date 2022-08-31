@@ -1,0 +1,14 @@
+.sticks-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: rgb(255, 255, 255);
+  height: 30vh;
+  gap: 10px;
+}
+
+.stick {
+  background-color: rgb(255, 0, 0);
+  height: 120px;
+  width: 30px;
+}
