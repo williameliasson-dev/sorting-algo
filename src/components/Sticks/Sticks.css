@@ -1,14 +1,22 @@
 .sticks-container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: flex-end;
   background-color: rgb(191, 191, 191);
-  height: 30vh;
+  height: 50vh;
+  margin-top: 100px;
   gap: 1px;
+}
+
+.sticks-container button {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 122px;
 }
 
 .stick {
   background-color: rgb(255, 0, 0);
   height: 120px;
-  width: 30px;
+  transition: 0.1s;
+  width: 1%;
 }

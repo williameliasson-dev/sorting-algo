@@ -11,7 +11,7 @@ const Sticks = (props) => {
 
     for (let i = 0; i < props.amount; i++) {
       const stick = {
-        height: Math.floor(Math.random() * 60) + 5,
+        height: Math.floor(Math.random() * 391) + 5,
         state: "none",
       };
       stickObjects.push(stick);
@@ -26,6 +26,8 @@ const Sticks = (props) => {
         {renderSticks.map((stick, i) => {
           let stateColor = "red";
           if (stick.state === "active") {
+            stateColor = "orange";
+          } else if (stick.state === "done") {
             stateColor = "green";
           }
           return (
