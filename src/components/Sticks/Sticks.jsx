@@ -42,7 +42,9 @@ const Sticks = (props) => {
           );
         })}
       </div>
-      <button onClick={() => bblSort(renderSticks, setRenderSticks)}>
+      <button
+        onClick={() => bblSort(renderSticks, setRenderSticks, props.speed)}
+      >
         bbl sort
       </button>
     </div>

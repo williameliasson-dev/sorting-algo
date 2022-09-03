@@ -1,4 +1,4 @@
-export default async function bblSort(arr, setArray) {
+export default async function bblSort(arr, setArray, speed) {
   const timer = (ms) => new Promise((res) => setTimeout(res, ms));
   let newArray = [...arr];
   for (let i = 0; i < arr.length; i++) {
@@ -9,7 +9,7 @@ export default async function bblSort(arr, setArray) {
       newArray[j + 1].state = "active";
       if (arr[j].height > arr[j + 1].height) {
         // If the condition is true then swap them
-        await timer(90);
+        await timer(speed);
         let temp = arr[j].height;
         newArray[j].height = arr[j + 1].height;
         newArray[j + 1].height = temp;

@@ -1,6 +1,6 @@
 .sticks-container {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: flex-end;
   background-color: rgb(191, 191, 191);
   height: 50vh;
@@ -17,6 +17,5 @@
 .stick {
   background-color: rgb(255, 0, 0);
   height: 120px;
-  transition: 0.1s;
   width: 1%;
 }

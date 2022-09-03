@@ -4,3 +4,20 @@
   padding: 2rem;
   text-align: center;
 }
+
+.slider-container {
+  margin: auto;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.sticks-slider {
+  width: 100%;
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  border-radius: 9px;
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  background-color: none;
+}
