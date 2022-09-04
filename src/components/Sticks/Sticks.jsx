@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Sticks.css";
 import bblSort from "../../../algorithms/bubbelSort";
+import insertionSort from "../../../algorithms/insertionSort";
 
 const Sticks = (props) => {
   const [renderSticks, setRenderSticks] = useState([]);
@@ -46,6 +47,13 @@ const Sticks = (props) => {
         onClick={() => bblSort(renderSticks, setRenderSticks, props.speed)}
       >
         bbl sort
+      </button>
+      <button
+        onClick={() =>
+          insertionSort(renderSticks, setRenderSticks, props.speed)
+        }
+      >
+        insertion sort
       </button>
     </div>
   );
