@@ -27,6 +27,8 @@ export default async function insertionSort(arr, setArray, speed) {
     newArray[i].state = "none";
     setArray([...newArray]);
   }
-  console.log(arr);
+  for (let x = 0; x < arr.length; x++) {
+    arr[x].state = "done";
+  }
   return arr;
 }
