@@ -5,6 +5,7 @@ import insertionSort from "../../../algorithms/insertionSort";
 
 const Sticks = (props) => {
   const [renderSticks, setRenderSticks] = useState([]);
+  const [getNewArray, setGetNewArray] = useState(false);
 
   useEffect(() => {
     setRenderSticks([]);
@@ -17,9 +18,9 @@ const Sticks = (props) => {
       };
       stickObjects.push(stick);
     }
-
     setRenderSticks(stickObjects);
-  }, [props.amount]);
+    setGetNewArray(false);
+  }, [props.amount, getNewArray]);
 
   return (
     <div>
@@ -43,18 +44,22 @@ const Sticks = (props) => {
           );
         })}
       </div>
-      <button
-        onClick={() => bblSort(renderSticks, setRenderSticks, props.speed)}
-      >
-        Bubble
-      </button>
-      <button
-        onClick={() =>
-          insertionSort(renderSticks, setRenderSticks, props.speed)
-        }
-      >
-        Insertion
-      </button>
+      <div>
+        <button
+          onClick={() => bblSort(renderSticks, setRenderSticks, props.speed)}
+        >
+          Bubble
+        </button>
+        <button
+          onClick={() =>
+            insertionSort(renderSticks, setRenderSticks, props.speed)
+          }
+        >
+          Insertion
+        </button>
+      </div>
+      <hr />
+      <button onClick={() => setGetNewArray(true)}>New array</button>
     </div>
   );
 };
