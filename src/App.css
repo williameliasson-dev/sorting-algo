@@ -9,6 +9,7 @@
   margin: auto;
   width: 30vw;
   display: flex;
+  color: white;
   flex-direction: column;
 }
 
@@ -20,4 +21,14 @@
   background: #d3d3d3; /* Grey background */
   outline: none; /* Remove outline */
   background-color: none;
+}
+
+button {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  width: 150px;
+  padding: 7px;
+  margin: 5px;
 }

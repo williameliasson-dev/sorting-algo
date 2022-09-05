@@ -46,14 +46,14 @@ const Sticks = (props) => {
       <button
         onClick={() => bblSort(renderSticks, setRenderSticks, props.speed)}
       >
-        bbl sort
+        Bubble
       </button>
       <button
         onClick={() =>
           insertionSort(renderSticks, setRenderSticks, props.speed)
         }
       >
-        insertion sort
+        Insertion
       </button>
     </div>
   );
