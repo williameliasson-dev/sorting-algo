@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Sticks.css";
 import bblSort from "../../../algorithms/bubbelSort";
 import insertionSort from "../../../algorithms/insertionSort";
+import cocktailSort from "../../../algorithms/cocktailSort";
 
 const Sticks = (props) => {
   const [renderSticks, setRenderSticks] = useState([]);
@@ -56,6 +57,13 @@ const Sticks = (props) => {
           }
         >
           Insertion
+        </button>
+        <button
+          onClick={() =>
+            cocktailSort(renderSticks, setRenderSticks, props.speed)
+          }
+        >
+          Cocktail
         </button>
       </div>
       <hr />

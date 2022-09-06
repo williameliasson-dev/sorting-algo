@@ -15,15 +15,17 @@
 
 .sticks-slider {
   width: 100%;
-  -webkit-appearance: none; /* Override default CSS styles */
+  -webkit-appearance: none; 
   appearance: none;
   border-radius: 9px;
-  background: #d3d3d3; /* Grey background */
-  outline: none; /* Remove outline */
+  background: #d3d3d3; 
+  outline: none; 
   background-color: none;
 }
 
 button {
+  font: inherit;
+  cursor: pointer;
   border: 1px solid white;
   background-color: black;
   color: white;
@@ -31,4 +33,9 @@ button {
   width: 150px;
   padding: 7px;
   margin: 5px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: rgb(41, 41, 41);
 }
