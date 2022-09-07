@@ -22,6 +22,10 @@
   transition: 0.5s;
 }
 
+.sticks-container-btn:disabled:hover {
+  background-color: black;
+}
+
 .sticks-container-btn:hover {
   background-color: rgb(41, 41, 41);
 }

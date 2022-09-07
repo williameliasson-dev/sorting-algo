@@ -23,6 +23,8 @@ export default async function selectionSort(arr, setArr, speed) {
       setArr([...arr]);
     }
   }
-  console.table([arr]);
+  for (let x = 0; x < arr.length; x++) {
+    arr[x].state = "done";
+  }
   return arr;
 }
