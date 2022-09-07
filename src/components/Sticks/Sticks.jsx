@@ -7,9 +7,16 @@ import selectionSort from "../../../algorithms/selectionSort";
 
 const Sticks = (props) => {
   const [renderSticks, setRenderSticks] = useState([]);
-  const [getNewArray, setGetNewArray] = useState(false);
+  const [running, setRunning] = useState(false);
 
-  useEffect(() => {
+  async function runSort(sort) {
+    if (running) return;
+    setRunning(true);
+    await sort(renderSticks, setRenderSticks, props.speed);
+    setRunning(false);
+  }
+
+  function newArray() {
     setRenderSticks([]);
     let stickObjects = [];
 
@@ -21,7 +28,11 @@ const Sticks = (props) => {
       stickObjects.push(stick);
     }
     setRenderSticks(stickObjects);
-  }, [props.amount, getNewArray]);
+  }
+
+  useEffect(() => {
+    newArray();
+  }, [props.amount]);
 
   return (
     <div>
@@ -34,7 +45,7 @@ const Sticks = (props) => {
               stateColor = "orange";
               break;
             case "passive":
-              stateColor = "black";
+              stateColor = "darkblue";
               break;
             case "done":
               stateColor = "green";
@@ -57,35 +68,23 @@ const Sticks = (props) => {
         })}
       </div>
       <div>
-        <button
-          onClick={() => bblSort(renderSticks, setRenderSticks, props.speed)}
-        >
+        <button disabled={running} onClick={() => runSort(bblSort)}>
           Bubble
         </button>
-        <button
-          onClick={() =>
-            insertionSort(renderSticks, setRenderSticks, props.speed)
-          }
-        >
+        <button disabled={running} onClick={() => runSort(insertionSort)}>
           Insertion
         </button>
-        <button
-          onClick={() =>
-            cocktailSort(renderSticks, setRenderSticks, props.speed)
-          }
-        >
+        <button disabled={running} onClick={() => runSort(cocktailSort)}>
           Cocktail
         </button>
-        <button
-          onClick={() =>
-            selectionSort(renderSticks, setRenderSticks, props.speed)
-          }
-        >
+        <button disabled={running} onClick={() => runSort(selectionSort)}>
           Selection
         </button>
       </div>
       <hr />
-      <button onClick={() => setGetNewArray(!getNewArray)}>New array</button>
+      <button disabled={running} onClick={() => newArray()}>
+        New array
+      </button>
     </div>
   );
 };

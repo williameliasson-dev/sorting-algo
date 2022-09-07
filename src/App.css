@@ -3,6 +3,14 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  color: white;
+  border-bottom: 1px solid gray;
 }
 
 .slider-container {
@@ -15,20 +23,18 @@
 
 .sticks-slider {
   width: 100%;
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   appearance: none;
   border-radius: 9px;
-  background: #d3d3d3; 
-  outline: none; 
+  background: #d3d3d3;
+  outline: none;
   background-color: none;
 }
 
 button {
   font: inherit;
   cursor: pointer;
-  border: 1px solid white;
-  background-color: black;
-  color: white;
+
   border-radius: 5px;
   width: 150px;
   padding: 7px;

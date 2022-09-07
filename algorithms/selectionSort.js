@@ -20,6 +20,7 @@ export default async function selectionSort(arr, setArr, speed) {
     if (lowest !== i) {
       // Swap
       [arr[i], arr[lowest]] = [arr[lowest], arr[i]];
+      setArr([...arr]);
     }
   }
   console.table([arr]);

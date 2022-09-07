@@ -4,10 +4,17 @@ import Sticks from "./components/Sticks/Sticks";
 
 function App() {
   const [amount, setAmount] = useState(100);
-  const [speed, setSpeed] = useState(1);
+  const [speed, setSpeed] = useState(20);
 
   return (
     <div>
+      <nav>
+        <h1>sorting-algo: </h1>
+        <p>a sorting algorithm visualizer made in react</p>
+        <a href="https://github.com/Apspelet33/sorting-algo">
+          <img src="github.svg"></img>
+        </a>
+      </nav>
       <Sticks amount={amount} speed={speed} />
       <div className="slider-container">
         <div>
