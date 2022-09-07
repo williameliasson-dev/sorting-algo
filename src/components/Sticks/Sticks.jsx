@@ -3,6 +3,7 @@ import "./Sticks.css";
 import bblSort from "../../../algorithms/bubbelSort";
 import insertionSort from "../../../algorithms/insertionSort";
 import cocktailSort from "../../../algorithms/cocktailSort";
+import selectionSort from "../../../algorithms/selectionSort";
 
 const Sticks = (props) => {
   const [renderSticks, setRenderSticks] = useState([]);
@@ -14,13 +15,12 @@ const Sticks = (props) => {
 
     for (let i = 0; i < props.amount; i++) {
       const stick = {
-        height: Math.floor(Math.random() * 391) + 5,
+        height: Math.floor(Math.random() * 397) + 5,
         state: "none",
       };
       stickObjects.push(stick);
     }
     setRenderSticks(stickObjects);
-    setGetNewArray(false);
   }, [props.amount, getNewArray]);
 
   return (
@@ -28,11 +28,22 @@ const Sticks = (props) => {
       <div className="sticks-container">
         {renderSticks.map((stick, i) => {
           let stateColor = "red";
-          if (stick.state === "active") {
-            stateColor = "orange";
-          } else if (stick.state === "done") {
-            stateColor = "green";
+
+          switch (stick.state) {
+            case "active":
+              stateColor = "orange";
+              break;
+            case "passive":
+              stateColor = "black";
+              break;
+            case "done":
+              stateColor = "green";
+              break;
+            default:
+              stateColor = "red";
+              break;
           }
+
           return (
             <span
               key={i}
@@ -65,9 +76,16 @@ const Sticks = (props) => {
         >
           Cocktail
         </button>
+        <button
+          onClick={() =>
+            selectionSort(renderSticks, setRenderSticks, props.speed)
+          }
+        >
+          Selection
+        </button>
       </div>
       <hr />
-      <button onClick={() => setGetNewArray(true)}>New array</button>
+      <button onClick={() => setGetNewArray(!getNewArray)}>New array</button>
     </div>
   );
 };
