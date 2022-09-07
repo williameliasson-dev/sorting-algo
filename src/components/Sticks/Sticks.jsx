@@ -68,21 +68,41 @@ const Sticks = (props) => {
         })}
       </div>
       <div>
-        <button disabled={running} onClick={() => runSort(bblSort)}>
+        <button
+          className="sticks-container-btn"
+          disabled={running}
+          onClick={() => runSort(bblSort)}
+        >
           Bubble
         </button>
-        <button disabled={running} onClick={() => runSort(insertionSort)}>
+        <button
+          className="sticks-container-btn"
+          disabled={running}
+          onClick={() => runSort(insertionSort)}
+        >
           Insertion
         </button>
-        <button disabled={running} onClick={() => runSort(cocktailSort)}>
+        <button
+          className="sticks-container-btn"
+          disabled={running}
+          onClick={() => runSort(cocktailSort)}
+        >
           Cocktail
         </button>
-        <button disabled={running} onClick={() => runSort(selectionSort)}>
+        <button
+          className="sticks-container-btn"
+          disabled={running}
+          onClick={() => runSort(selectionSort)}
+        >
           Selection
         </button>
       </div>
       <hr />
-      <button disabled={running} onClick={() => newArray()}>
+      <button
+        className="sticks-container-btn"
+        disabled={running}
+        onClick={() => newArray()}
+      >
         New array
       </button>
     </div>

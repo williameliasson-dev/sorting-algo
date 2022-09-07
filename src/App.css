@@ -30,18 +30,3 @@ nav {
   outline: none;
   background-color: none;
 }
-
-button {
-  font: inherit;
-  cursor: pointer;
-
-  border-radius: 5px;
-  width: 150px;
-  padding: 7px;
-  margin: 5px;
-  transition: 0.5s;
-}
-
-button:hover {
-  background-color: rgb(41, 41, 41);
-}

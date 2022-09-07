@@ -8,15 +8,26 @@
   gap: 1px;
 }
 
-.sticks-container button {
+.sticks-container-btn {
   border: 1px solid white;
   background-color: black;
   color: white;
   border-radius: 122px;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 150px;
+  padding: 7px;
+  margin: 5px;
+  transition: 0.5s;
 }
 
-.sticks-container button:disabled {
-  opacity: 0;
+.sticks-container-btn:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+.sticks-container-btn:disabled {
+  opacity: 0.5;
 }
 
 .stick {
