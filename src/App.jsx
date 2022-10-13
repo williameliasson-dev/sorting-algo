@@ -16,6 +16,7 @@ function App() {
         </a>
       </nav>
       <Sticks amount={amount} speed={speed} />
+
       <div className="slider-container">
         <div>
           <input
