@@ -10,7 +10,7 @@ nav {
   display: flex;
   align-items: center;
   color: black;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid black;
 }
 
 nav a {
@@ -25,15 +25,6 @@ nav a {
   flex-direction: column;
 }
 
-.sticks-slider {
-  width: 100%;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 9px;
-  background: #d3d3d3;
-  outline: none;
-  background-color: none;
-}
 input[type="range"] {
   width: 100%;
   margin: 1.85px 0;
